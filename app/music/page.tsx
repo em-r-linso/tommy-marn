@@ -1,7 +1,7 @@
 export default function Page() {
 	return (
 		<main>
-			<p>Home page</p>
+			<p>Music page</p>
 		</main>
 	);
 }
