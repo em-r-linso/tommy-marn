@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "./common/header";
 import Footer from "./common/footer";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
 			lang="en"
 			className={`${libreFranklin.variable} h-full antialiased`}
 		>
+			<Analytics />
 			<body className="min-h-full flex flex-col font-sans">
 				<Header />
 				{children}
