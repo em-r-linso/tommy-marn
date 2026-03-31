@@ -5,66 +5,56 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import NavSection from "./nav-section";
 
 const navLinks = [
-	{ href: "/music", label: "Music" },
-	{ href: "/merch", label: "Merch" },
-	{ href: "/newsletter", label: "Newsletter" },
-	{ href: "/tour", label: "Tour" },
+	{ href: "/music", display: "Music" },
+	{ href: "/merch", display: "Merch" },
+	{ href: "/newsletter", display: "Newsletter" },
+	{ href: "/tour", display: "Tour" },
 ];
 
 const donationLinks = [
-	{ href: "https://www.patreon.com/user?u=91562271", label: "Patreon" },
-	{ href: "/", label: "PayPal" }, // TODO: Update with actual PayPal link
-	{ href: "https://www.buymeacoffee.com/thomasmarn", label: "BuyMeACoffee" },
+	{ href: "https://www.patreon.com/user?u=91562271", display: "Patreon" },
+	{ href: "/", display: "PayPal" }, // TODO: Update with actual PayPal link
+	{
+		href: "https://www.buymeacoffee.com/thomasmarn",
+		display: "BuyMeACoffee",
+	},
 ];
 
 const socialLinks = [
 	{
 		href: "https://www.instagram.com/thomasmarnmusic/",
-		icon: <InstagramIcon />,
+		display: <InstagramIcon />,
 	},
 	{
 		href: "https://www.facebook.com/profile.php?id=100092565421512/",
-		icon: <FacebookIcon />,
+		display: <FacebookIcon />,
 	},
 	{
 		href: "https://x.com/thomas_marn",
-		icon: <XIcon />,
+		display: <XIcon />,
 	},
 	{
 		href: "https://www.youtube.com/channel/UCpXf2lsrbfIYtQOrhGR1qQg/",
-		icon: <YouTubeIcon />,
+		display: <YouTubeIcon />,
 	},
 ];
 
 export default function Footer() {
 	return (
-		<footer>
-			<Link href="/">
-				<h1>Tommy Marn</h1>
+		<footer className="grid grid-cols-[auto_1fr] grid-rows-3 gap-4 text-xl">
+			<Link href="/" className="row-span-3">
+				<img
+					className="h-40"
+					src="https://placehold.net/400x400.png"
+					alt="Tommy Marn Logo"
+				/>
 			</Link>
-			<nav>
-				{socialLinks.map((link) => (
-					<Link key={link.href} href={link.href}>
-						{link.icon}
-					</Link>
-				))}
-			</nav>
-			<nav>
-				{navLinks.map((link) => (
-					<Link key={link.href} href={link.href}>
-						{link.label}
-					</Link>
-				))}
-			</nav>
-			<nav>
-				{donationLinks.map((link) => (
-					<Link key={link.href} href={link.href}>
-						{link.label}
-					</Link>
-				))}
-			</nav>
+			<NavSection links={socialLinks} />
+			<NavSection links={navLinks} />
+			<NavSection links={donationLinks} />
 		</footer>
 	);
 }

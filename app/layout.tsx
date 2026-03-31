@@ -29,7 +29,7 @@ export default function RootLayout({
 			className={`${libreFranklin.variable} h-full antialiased`}
 		>
 			<Analytics />
-			<body className="min-h-full flex flex-col font-sans">
+			<body className="min-h-full flex flex-col font-sans text-base">
 				<Header />
 				{children}
 				<Footer />
