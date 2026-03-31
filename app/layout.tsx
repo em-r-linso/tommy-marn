@@ -3,6 +3,7 @@ import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Header from "./common/header";
+import Footer from "./common/footer";
 
 const libreFranklin = Libre_Franklin({
 	variable: "--font-libre-franklin",
@@ -12,7 +13,8 @@ const libreFranklin = Libre_Franklin({
 
 export const metadata: Metadata = {
 	title: "Tommy Marn",
-	description: "Official Tommy Marn website with music, merch, newsletter, and tour information.",
+	description:
+		"Official Tommy Marn website with music, merch, newsletter, and tour information.",
 };
 
 export default function RootLayout({
@@ -28,6 +30,7 @@ export default function RootLayout({
 			<body className="min-h-full flex flex-col font-sans">
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
