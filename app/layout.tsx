@@ -30,9 +30,11 @@ export default function RootLayout({
 		>
 			<Analytics />
 			<body className="min-h-full flex flex-col font-sans text-base">
-				<Header />
-				{children}
-				<Footer />
+				<div className="m-10">
+					<Header />
+					{children}
+					<Footer />
+				</div>
 			</body>
 		</html>
 	);
