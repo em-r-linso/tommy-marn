@@ -23,13 +23,22 @@ export const postType = defineType({
 			validation: (rule) => rule.required(),
 		}),
 		defineField({
-			name: "image",
-			type: "image",
-		}),
-		defineField({
 			name: "body",
 			type: "array",
-			of: [{ type: "block" }],
+			of: [
+				{ type: "block" },
+				{
+					type: "image",
+					options: { hotspot: true },
+					fields: [
+						defineField({
+							name: "alt",
+							type: "string",
+							title: "Alt text",
+						}),
+					],
+				},
+			],
 		}),
 	],
 });
