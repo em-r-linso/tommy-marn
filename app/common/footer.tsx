@@ -100,11 +100,7 @@ export default function Footer() {
 	return (
 		<footer className="grid grid-cols-[auto_1fr] grid-rows-3 text-xl">
 			<Link href="/" className="row-span-3">
-				<img
-					className="h-40"
-					src="https://placehold.net/400x400.png"
-					alt="Tommy Marn Logo"
-				/>
+				<img className="h-40" src="/logo-flower.png" alt="Tommy Marn Logo" />
 			</Link>
 			<NavSection links={socialLinks} />
 			<NavSection links={navLinks} />
