@@ -25,6 +25,29 @@ export const albumType = defineType({
 		defineField({
 			name: "coverImage",
 			type: "image",
+			validation: (rule) => rule.required(),
+		}),
+		defineField({
+			name: "trackList",
+			type: "array",
+			of: [
+				{
+					type: "object",
+					fields: [
+						defineField({
+							name: "trackName",
+							type: "string",
+							validation: (rule) => rule.required(),
+						}),
+						defineField({
+							name: "audioFile",
+							type: "file",
+							options: { accept: "audio/*" },
+							validation: (rule) => rule.required(),
+						}),
+					],
+				},
+			],
 		}),
 	],
 });
