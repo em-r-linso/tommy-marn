@@ -98,13 +98,15 @@ const socialLinks = [
 
 export default function Footer() {
 	return (
-		<footer className="grid grid-cols-[auto_1fr] grid-rows-3 text-xl">
-			<Link href="/" className="row-span-3">
-				<img className="h-40" src="/logo-flower.png" alt="Tommy Marn Logo" />
+		<footer className="flex justify-between w-full">
+			<Link href="/" className="h-40">
+				<img src="/logo-flower.png" alt="Tommy Marn Logo" className="h-full" />
 			</Link>
-			<NavSection links={socialLinks} />
-			<NavSection links={navLinks} />
-			<NavSection links={donationLinks} />
+			<nav className="flex flex-col items-end gap-4">
+				<NavSection links={socialLinks} />
+				<NavSection links={navLinks} />
+				<NavSection links={donationLinks} />
+			</nav>
 		</footer>
 	);
 }

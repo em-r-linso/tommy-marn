@@ -10,7 +10,7 @@ const navLinks = [
 
 export default function Header() {
 	return (
-		<header className="flex justify-between">
+		<header className="flex justify-between items-center w-full">
 			<Link href="/">
 				<h1 className="text-6xl">Tommy Marn</h1>
 			</Link>
