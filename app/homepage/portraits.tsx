@@ -1,7 +1,6 @@
 export default function Portraits() {
 	return (
 		<div>
-			<div className="bg-black">a</div>
 			<div className="flex">
 				<div className="flex-1 min-w-0 aspect-[9/10]">
 					<img
@@ -25,7 +24,6 @@ export default function Portraits() {
 					/>
 				</div>
 			</div>
-			<div className="bg-black">a</div>
 		</div>
 	);
 }

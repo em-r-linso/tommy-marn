@@ -10,12 +10,12 @@ export default function NavSection(props: { links: { href: string; display: Reac
 	const pathname = usePathname();
 
 	return (
-		<nav className="text-xl flex">
+		<nav className="text-xl flex gap-4">
 			{links.map((link) => (
 				<Link
 					key={link.href}
 					href={link.href}
-					className="px-5 self-stretch flex items-center cursor-pointer group"
+					className="self-stretch flex items-center cursor-pointer group"
 				>
 					<span
 						className={clsx(
