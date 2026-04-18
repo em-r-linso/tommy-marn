@@ -20,7 +20,7 @@ export const albumType = defineType({
 			name: "releaseDate",
 			type: "datetime",
 			initialValue: () => new Date().toISOString(),
-			validation: (rule) => rule.required(),
+			description: 'Optional. When omitted, page displays "coming soon".',
 		}),
 		defineField({
 			name: "coverImage",
