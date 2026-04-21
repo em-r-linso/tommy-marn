@@ -69,11 +69,29 @@ const navLinks = [
 ];
 
 const donationLinks = [
-	{ href: "https://www.patreon.com/user?u=91562271", display: "Patreon" },
-	{ href: "/", display: "PayPal" }, // TODO: Update with actual PayPal link
+	{
+		href: "https://www.patreon.com/user?u=91562271",
+		display: (
+			<span className="flex items-center gap-2">
+				<img src="/social-icons/patreon.png" alt="Patreon" className="h-[1em]" />
+				Become a patron
+			</span>
+		),
+		newTab: true,
+	},
 	{
 		href: "https://www.buymeacoffee.com/thomasmarn",
-		display: "BuyMeACoffee",
+		display: (
+			<span className="flex items-center gap-2">
+				<img
+					src="/social-icons/buy-me-a-coffee.png"
+					alt="Buy me a coffee"
+					className="h-[1em]"
+				/>
+				Buy me a coffee
+			</span>
+		),
+		newTab: true,
 	},
 ];
 
@@ -81,18 +99,22 @@ const socialLinks = [
 	{
 		href: "https://www.instagram.com/thomasmarnmusic/",
 		display: <InstagramIcon />,
+		newTab: true,
 	},
 	{
 		href: "https://www.facebook.com/profile.php?id=100092565421512/",
 		display: <FacebookIcon />,
+		newTab: true,
 	},
 	{
 		href: "https://x.com/thomas_marn",
 		display: <XIcon />,
+		newTab: true,
 	},
 	{
 		href: "https://www.youtube.com/channel/UCpXf2lsrbfIYtQOrhGR1qQg/",
 		display: <YouTubeIcon />,
+		newTab: true,
 	},
 ];
 

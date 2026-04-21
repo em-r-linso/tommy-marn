@@ -10,6 +10,7 @@ type NavLink = {
 	href: string;
 	display: ReactNode;
 	decorationImage?: { src: string; height: number; offsetY?: number };
+	newTab?: boolean;
 };
 
 type NavSectionProps = {
@@ -30,6 +31,7 @@ export default function NavSection(props: NavSectionProps) {
 					key={link.href}
 					href={link.href}
 					className="self-stretch flex items-center cursor-pointer group"
+					{...(link.newTab && { target: "_blank", rel: "noopener noreferrer" })}
 				>
 					<span style={{ position: "relative", overflow: "visible" }}>
 						{link.decorationImage && (
