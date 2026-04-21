@@ -20,3 +20,21 @@ body {
 .debug-border {
   outline: 1px solid black;
 }
+
+@keyframes tarotcta {
+  0% {
+	transform: translate(0%, 80%) rotate(0deg);
+  }
+  25% {
+	transform: translate(50%, 0%) rotate(10deg);
+  }
+  50% {
+    transform: translate(0%, -80%) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, 0%) rotate(-10deg);
+  }
+  100% {
+	transform: translate(0%, 80%) rotate(0deg);
+  }
+}
