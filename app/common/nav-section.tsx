@@ -56,7 +56,7 @@ export default function NavSection(props: NavSectionProps) {
 							className={clsx(
 								"inline-block whitespace-nowrap transition-transform duration-150 group-hover:[transform:rotate(10deg)]",
 								{
-									"text-yellow-500 [text-shadow:2px_2px_0_rgb(0_0_0)]":
+									"[background-image:var(--color-accent)] bg-clip-text text-transparent [filter:drop-shadow(2px_2px_0_rgb(0_0_0))]":
 										link.href == pathname,
 								},
 							)}
