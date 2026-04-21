@@ -26,11 +26,15 @@ const navLinks = [
 
 export default function Header() {
 	return (
-		<header className="flex justify-between items-center w-full">
-			<Link href="/">
-				<h1 className="text-6xl">Tommy Marn</h1>
-			</Link>
-			<NavSection links={navLinks} />
+		<header className="flex flex-wrap md:flex-nowrap justify-center md:justify-between items-center md:items-end w-full gap-y-10">
+			<div className="basis-full md:basis-auto flex justify-center md:justify-start">
+				<Link href="/">
+					<h1 className="text-5xl lg:text-6xl whitespace-nowrap">Tommy Marn</h1>
+				</Link>
+			</div>
+			<div className="basis-full md:basis-auto flex justify-center md:justify-end">
+				<NavSection links={navLinks} gapClassName="gap-7" />
+			</div>
 		</header>
 	);
 }

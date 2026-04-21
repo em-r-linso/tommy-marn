@@ -12,12 +12,19 @@ type NavLink = {
 	decorationImage?: { src: string; height: number; offsetY?: number };
 };
 
-export default function NavSection(props: { links: NavLink[] }) {
-	const { links } = props;
+type NavSectionProps = {
+	links: NavLink[];
+	gapClassName?: string;
+	gap?: number;
+};
+
+export default function NavSection(props: NavSectionProps) {
+	const { links, gapClassName, gap = 4 } = props;
 	const pathname = usePathname();
+	const resolvedGapClass = gapClassName ?? `gap-${gap}`;
 
 	return (
-		<nav className="text-xl flex gap-4">
+		<nav className={clsx("text-xl flex", resolvedGapClass)}>
 			{links.map((link) => (
 				<Link
 					key={link.href}
@@ -47,7 +54,7 @@ export default function NavSection(props: { links: NavLink[] }) {
 						)}
 						<span
 							className={clsx(
-								"inline-block transition-transform duration-150 group-hover:[transform:rotate(10deg)]",
+								"inline-block whitespace-nowrap transition-transform duration-150 group-hover:[transform:rotate(10deg)]",
 								{
 									"text-yellow-500 [text-shadow:2px_2px_0_rgb(0_0_0)]":
 										link.href == pathname,
