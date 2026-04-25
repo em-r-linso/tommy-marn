@@ -5,6 +5,7 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import TiltOnHoverText from "./tilt-on-hover-text";
 
 type NavLink = {
 	href: string;
@@ -30,10 +31,10 @@ export default function NavSection(props: NavSectionProps) {
 				<Link
 					key={link.href}
 					href={link.href}
-					className="self-stretch flex items-center cursor-pointer group"
+					className="self-stretch flex items-center group"
 					{...(link.newTab && { target: "_blank", rel: "noopener noreferrer" })}
 				>
-					<span style={{ position: "relative", overflow: "visible" }}>
+					<span className="relative inline-block overflow-visible">
 						{link.decorationImage && (
 							<Image
 								src={link.decorationImage.src}
@@ -54,17 +55,14 @@ export default function NavSection(props: NavSectionProps) {
 								}}
 							/>
 						)}
-						<span
-							className={clsx(
-								"inline-block whitespace-nowrap transition-transform duration-150 group-hover:[transform:rotate(10deg)]",
-								{
-									"[background-image:var(--color-accent)] bg-clip-text text-transparent [filter:drop-shadow(2px_2px_0_rgb(0_0_0))]":
-										link.href == pathname,
-								},
-							)}
+						<TiltOnHoverText
+							className={clsx({
+								"[background-image:var(--color-accent)] bg-clip-text text-transparent [filter:drop-shadow(2px_2px_0_rgb(0_0_0))]":
+									link.href == pathname,
+							})}
 						>
 							{link.display}
-						</span>
+						</TiltOnHoverText>
 					</span>
 				</Link>
 			))}
