@@ -10,10 +10,13 @@ export default async function Page() {
 				alt="Tarot Deck Details"
 				className="max-h-[50vh] max-w-full"
 			/>
-			<Link href="/learn-more" className="text-5xl group inline-block whitespace-nowrap">
+			<Link
+				href="/tarot/learn-more"
+				className="text-5xl group inline-block whitespace-nowrap"
+			>
 				<TiltOnHoverText>Learn more</TiltOnHoverText>
 			</Link>
-			<Link href="/preorder" className="text-5xl group inline-block whitespace-nowrap">
+			<Link href="/tarot/preorder" className="text-5xl group inline-block whitespace-nowrap">
 				<TiltOnHoverText>Preorder Now</TiltOnHoverText>
 			</Link>
 		</main>
