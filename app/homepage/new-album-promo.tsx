@@ -2,6 +2,7 @@ import Link from "next/link";
 import { createImageUrlBuilder } from "@sanity/image-url";
 import type { SanityImageSource } from "@sanity/image-url";
 import { client } from "@/app/sanity/client";
+import TiltOnHoverText from "../common/tilt-on-hover-text";
 
 const { projectId, dataset } = client.config();
 
@@ -20,7 +21,7 @@ export default function NewAlbumPromo({ album }: { album?: Album }) {
 	if (!album) return null;
 
 	return (
-		<section className="group relative block w-full aspect-[20/9]">
+		<section className="relative block w-full aspect-[20/9]">
 			<img
 				src="/new-album-promo/drum.svg"
 				className="absolute left-[6%] bottom-[0%] w-[14%] h-auto"
@@ -51,15 +52,13 @@ export default function NewAlbumPromo({ album }: { album?: Album }) {
 			/>
 			<Link
 				href={`/music/${album.slug.current}`}
-				className="absolute left-[50%] -translate-x-1/2 top-0 w-[36%] h-[100%]"
+				className="group absolute left-[50%] -translate-x-1/2 top-0 w-[36%] h-[100%]"
 				style={{ containerType: "inline-size" }} // non-tailwind style because cqw not supported in tailwind
 			>
-				<img src={urlFor(album.coverImage)?.url()} alt={album.title} />
-				<span className="w-full block text-center" style={{ fontSize: "14cqw" }}>
-					{" "}
-					{/* non-tailwind style because cqw not supported in tailwind */}
+				<TiltOnHoverText className="w-full text-center" style={{ fontSize: "14cqw" }}>
+					<img src={urlFor(album.coverImage)?.url()} alt={album.title} />
 					Listen Now!
-				</span>
+				</TiltOnHoverText>
 			</Link>
 		</section>
 	);
