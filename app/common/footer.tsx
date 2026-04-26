@@ -120,11 +120,11 @@ const socialLinks = [
 
 export default function Footer() {
 	return (
-		<footer className="flex justify-between w-full">
+		<footer className="flex flex-col sm:flex-row sm:justify-between w-full gap-5">
 			<Link href="/" className="h-40">
 				<img src="/logo-flower.png" alt="Tommy Marn Logo" className="h-full" />
 			</Link>
-			<nav className="flex flex-col items-end gap-4">
+			<nav className="flex flex-col sm:items-end gap-4">
 				<NavSection links={socialLinks} />
 				<NavSection links={navLinks} />
 				<NavSection links={donationLinks} />
