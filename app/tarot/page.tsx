@@ -16,8 +16,8 @@ export default async function Page() {
 			>
 				<TiltOnHoverText>Learn more</TiltOnHoverText>
 			</Link>
-			<Link href="/tarot/preorder" className="text-5xl group inline-block whitespace-nowrap">
-				<TiltOnHoverText>Preorder Now</TiltOnHoverText>
+			<Link href="/" className="text-5xl group inline-block whitespace-nowrap">
+				<TiltOnHoverText>Buy now</TiltOnHoverText>
 			</Link>
 		</main>
 	);

@@ -82,8 +82,8 @@ export default async function Page() {
 				</div>
 			</div>
 			<div className="flex flex-col sm:flex-row gap-10 text-2xl">
-				<Link href="/tarot/preorder" className="group">
-					<TiltOnHoverText>Preorder your deck</TiltOnHoverText>
+				<Link href="/" className="group">
+					<TiltOnHoverText>Buy now</TiltOnHoverText>
 				</Link>
 				<Link
 					href="https://www.tommymarn.com/_files/ugd/31f0e3_b5f95989684741d2881f1b24f0b9137f.pdf"
