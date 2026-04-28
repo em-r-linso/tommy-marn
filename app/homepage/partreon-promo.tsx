@@ -5,7 +5,7 @@ export default function PatreonPromo() {
 		<section className="w-full">
 			<Link
 				href="https://www.patreon.com/user?u=91562271"
-				className="flex flex-col items-center gap-0 md:gap-6"
+				className="flex flex-col items-center gap-0 md:gap-6 transition-transform duration-200 ease-out hover:scale-110"
 			>
 				<div className="flex flex-col md:flex-row space-between items-center gap-0 md:gap-4">
 					<span className="text-center text-5xl">Bonus Demos</span>

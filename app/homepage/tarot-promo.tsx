@@ -5,7 +5,7 @@ export default function TarotPromo() {
 		<section className="w-full">
 			<Link
 				href="/tarot"
-				className="group relative mx-auto block aspect-[16/10] w-[min(100%,70vh)] max-w-5xl overflow-visible"
+				className="group relative mx-auto block aspect-[16/10] w-[min(100%,70vh)] max-w-5xl overflow-visible transition-transform duration-200 ease-out hover:scale-110"
 			>
 				<img src="/tarot-deck-promo/back.jpg" alt="Tarot deck" className="w-full" />
 
