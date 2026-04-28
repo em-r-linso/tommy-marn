@@ -8,8 +8,8 @@ import WiggleSvgFile from "../common/wiggle-svg-file";
 const { projectId, dataset } = client.config();
 
 const WIGGLE_RANGE_PX = 0.2;
-const WIGGLE_FREQUENCY_HZ = 0.65;
-const WIGGLE_FPS = 3;
+const WIGGLE_FREQUENCY_HZ = 0.2;
+const WIGGLE_FPS = 2;
 
 const DECORATIVE_SVGS = [
 	{
