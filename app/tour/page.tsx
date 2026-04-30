@@ -33,7 +33,7 @@ const donationLinks = [
 ];
 
 // tour dates ordered by date ascending, TBD (null date) at end
-const QUERY = `*[_type == "tourDate" && !coalesce(archive, false)] | order(coalesce(date, "9999-12-31") asc){
+const QUERY = `*[_type == "tourDate"] | order(coalesce(date, "9999-12-31") asc){
 	_id,
 	date,
 	city,

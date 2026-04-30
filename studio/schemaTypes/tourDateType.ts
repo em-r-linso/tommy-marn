@@ -34,12 +34,5 @@ export const tourDateType = defineType({
 			name: "promoText",
 			type: "string",
 		}),
-		defineField({
-			name: "archive",
-			title: "Archive",
-			type: "boolean",
-			description: "When true, this tour date is hidden from the tour page.",
-			initialValue: false,
-		}),
 	],
 });
