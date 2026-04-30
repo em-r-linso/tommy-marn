@@ -8,9 +8,10 @@ const navLinks = [
 		decorationImage: { src: "/header-nav/music.svg", height: 60, offsetY: -2 },
 	},
 	{
-		href: "/merch",
+		href: "https://thomas-marn.myspreadshop.com/",
 		display: "Merch",
 		decorationImage: { src: "/header-nav/merch.svg", height: 40, offsetY: -30 },
+		newTab: true,
 	},
 	{
 		href: "/newsletter",

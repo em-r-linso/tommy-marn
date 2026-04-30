@@ -63,7 +63,7 @@ function YouTubeIcon() {
 
 const navLinks = [
 	{ href: "/music", display: "Music" },
-	{ href: "/merch", display: "Merch" },
+	{ href: "https://thomas-marn.myspreadshop.com/", display: "Merch", newTab: true },
 	{ href: "/newsletter", display: "Newsletter" },
 	{ href: "/tour", display: "Tour" },
 ];
