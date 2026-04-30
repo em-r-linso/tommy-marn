@@ -95,7 +95,7 @@ const donationLinks = [
 	},
 ];
 
-const socialLinks = [
+export const socialLinks = [
 	{
 		href: "https://www.instagram.com/thomasmarnmusic/",
 		display: <InstagramIcon />,
