@@ -82,7 +82,7 @@ export default async function Page() {
 				</div>
 			</div>
 			<div className="flex flex-col sm:flex-row gap-10 text-2xl">
-				<Link href="/" className="group">
+				<Link href="https://buy.stripe.com/9B69ALeHC34I7oAe4D8AE00" className="group">
 					<TiltOnHoverText>Buy now</TiltOnHoverText>
 				</Link>
 				<Link
