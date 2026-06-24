@@ -17,7 +17,6 @@ export default async function Page() {
 
 	return (
 		<main className="flex flex-col items-center gap-15">
-			Test :)
 			<TarotPromo />
 			<NewAlbumPromo album={album} />
 			<PatreonPromo />
