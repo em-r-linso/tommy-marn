@@ -16,7 +16,10 @@ export default async function Page() {
 			>
 				<TiltOnHoverText>Learn more</TiltOnHoverText>
 			</Link>
-			<Link href="/" className="text-5xl group inline-block whitespace-nowrap">
+			<Link
+				href="https://buy.stripe.com/9B69ALeHC34I7oAe4D8AE00"
+				className="text-5xl group inline-block whitespace-nowrap"
+			>
 				<TiltOnHoverText>Buy now</TiltOnHoverText>
 			</Link>
 		</main>
